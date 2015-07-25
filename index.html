@@ -1,15 +1,35 @@
 <html>
 <head>
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
-<script> $(document).ready(function(){
-  var clobber_server = require('clobber_server');
+<script> 
 
+  var clobber_server = require('clobber_server');
+  var gui = require('nw.gui');
   clobber_server.server('../clobber_server/config.json');
   
-  window.location.href="http://localhost:2562";
   
 
-});</script>
+
+
+  var win = gui.Window.get();
+  var menubar = new gui.Menu({type:'menubar'});
+  var file_menu = new gui.Menu();
+  
+  file_menu.append(new gui.MenuItem({
+    label:"Exit", 
+    click: function () {
+      process.exit();
+
+    }
+  }));
+
+  menubar.append(new gui.MenuItem({label:'File', submenu:file_menu}));
+  win.menu = menubar;
+  
+  window.location.href="http://localhost:2562"; 
+  
+
+</script>
 </head>
 <body>
   
