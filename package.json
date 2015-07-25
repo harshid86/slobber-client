@@ -1,0 +1,15 @@
+{
+  "name": "clobber_client",
+  "version": "0.0.0",
+  "description": "Node Webkit client for clobber sever",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aled Lewis",
+  "license": "MIT",
+  "dependencies": {
+    "clobber_server": "file:../clobber_server",
+    "nw": "^0.12.2"
+  }
+}
