@@ -1,24 +1,25 @@
 {
-  "name": "clobber_client",
-  "version": "0.0.0",
+  "name": "slobber-client",
+  "version": "0.0.1",
   "description": "Node Webkit client for clobber sever",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nw ."    
   },
   "author": "Aled Lewis",
   "license": "MIT",
   "dependencies": {
-    "clobber_server": "file:../clobber_server",
-    "nw": "^0.12.2"
+    "nw": "^0.12.2",
+    "slobber-server": "0.0.5"
   },
   "window": {
-    "toolbar":false,
+    "toolbar": false,
     "show": true,
-    "width":800,
-    "height":600,
-    "title": "Clobber",
-    "resizable":true,
+    "width": 800,
+    "height": 600,
+    "title": "Slobber",
+    "resizable": true,
     "icon": "./128.png"
   }
 }

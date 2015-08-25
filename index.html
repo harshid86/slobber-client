@@ -1,18 +1,17 @@
+<!doctype html>
 <html>
 <head>
+<style>
+
+</style>
 <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
 <script> 
 
-  var clobber_server = require('clobber_server');
+  var clobber_server = require('slobber-server');
   var gui = require('nw.gui');
-  clobber_server.server('../clobber_server/config.json');
-  
-  
-
-
-
+  clobber_server.server;
   var win = gui.Window.get();
-  var menubar = new gui.Menu({type:'menubar'});
+  var menubar = new gui.Menu({type:'menubar'}); 
   var file_menu = new gui.Menu();
   
   file_menu.append(new gui.MenuItem({
@@ -26,9 +25,9 @@
   menubar.append(new gui.MenuItem({label:'File', submenu:file_menu}));
   win.menu = menubar;
   
-  window.location.href="http://localhost:2562"; 
-  
-
+  $(document).ready(function(){
+    $(document.body).append($('<iframe src="http://localhost:7562" style="position: absolute; height: 95%; width:95%; overflow:visible; overflow-y:visible; border: none"/>'));
+  });
 </script>
 </head>
 <body>
