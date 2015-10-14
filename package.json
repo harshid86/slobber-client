@@ -1,6 +1,6 @@
 {
   "name": "slobber-client",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Node Webkit client for clobber sever",
   "main": "index.html",
   "scripts": {
@@ -11,7 +11,7 @@
   "license": "MIT",
   "dependencies": {
     "nw": "^0.12.2",
-    "slobber-server": "0.0.6"
+    "slobber-server": "~0"
   },
   "window": {
     "toolbar": true,
