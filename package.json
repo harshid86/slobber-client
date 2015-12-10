@@ -1,25 +1,14 @@
 {
   "name": "slobber-client",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "Node Webkit client for clobber sever",
-  "main": "index.html",
+  "main": "client.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nw ."
+    "start": "electron client.js",
+    "package_win": "electron-packager . slobber --platform=win32 --arch=x64 --version=0.35.4 --asar --overwrite --asar-unpack \"**/node_modules/node-notifier/vendor/**\""
   },
   "author": "Aled Lewis",
   "license": "MIT",
-  "dependencies": {
-    "nw": "^0.12.2",
-    "slobber-server": "~0"
-  },
-  "window": {
-    "toolbar": true,
-    "show": true,
-    "width": 800,
-    "height": 600,
-    "title": "Slobber",
-    "resizable": true,
-    "icon": "./128.png"
-  }
+  "dependencies": {"slobber-server": ">=0.0.11"}
 }
