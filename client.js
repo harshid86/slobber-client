@@ -4,8 +4,6 @@ const app = electron.app;  // Module to control application life.
 const BrowserWindow = electron.BrowserWindow;  // Module to create native browser window.
 
 
-// Report crashes to our server.
-electron.crashReporter.start();
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -13,6 +11,7 @@ let mainWindow;
 let clobberServer;
 var configFile = process.argv[2]||'config.json'
 
+console.log("using config "+configFile);
 
 
 // Quit when all windows are closed.
@@ -34,16 +33,17 @@ app.on('ready', function() {
   mainWindow = new BrowserWindow({
     width: 800, 
     height: 600,
-    "node-integration": false,
-    icon: '128.png'    
+    webPreferences:{nodeIntegration: false},
+    icon: '128.png', 
+    title: "Slobber"
   });
 
   clobberServer = require('slobber-server').server(configFile, function(){
+    console.log("executed");
     mainWindow.loadURL('http://localhost:7562');
   });
  
-  // Open the DevTools.
-  mainWindow.webContents.openDevTools();
+  
 
   mainWindow.on('closed', function() {
     
