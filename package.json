@@ -1,6 +1,6 @@
 {
   "name": "slobber-client",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Node Webkit client for clobber sever",
   "main": "client.js",
   "scripts": {
@@ -10,5 +10,15 @@
   },
   "author": "Aled Lewis",
   "license": "MIT",
-  "dependencies": {"slobber-server": ">=0.0.11"}
+  "dependencies": {
+    "slobber-server": ">=0.0.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AledLewis/slobber-client"
+  },
+  "devDependencies": {
+    "electron-packager": "^7.0.3",
+    "electron-prebuilt": "^1.2.2"
+  }
 }
