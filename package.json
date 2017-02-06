@@ -11,11 +11,11 @@
   "author": "Aled Lewis",
   "license": "MIT",
   "dependencies": {
-    "slobber-server": ">=0.0.12"
+    "harshid86/slobber_server": ">=0.0.12"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/AledLewis/slobber-client"
+    "url": "https://github.com/harshid86/slobber-client"
   },
   "devDependencies": {
     "electron-packager": "^7.0.3",
