@@ -11,6 +11,7 @@
   "author": "Aled Lewis",
   "license": "MIT",
   "dependencies": {
+    "slobber_server": "github:harshid86/slobber_server"
   },
   "repository": {
     "type": "git",
