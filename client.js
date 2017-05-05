@@ -27,7 +27,7 @@ app.on('ready', function() {
   // Create the browser window.
 
   mainWindow = new BrowserWindow({
-    width: 500, 
+    width: 800, 
     height: 600,
     webPreferences:{nodeIntegration: false},
     icon: '128.png', 
